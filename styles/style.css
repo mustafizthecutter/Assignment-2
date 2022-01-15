@@ -98,6 +98,7 @@ this is the gadgets part
 .collection{
     display: grid;
     justify-content: center;
+    margin-bottom: 15px;
 }
 .collection-title{
     text-align: center;
@@ -144,15 +145,41 @@ this is the gadgets part
     text-decoration: none;
     margin-left: 3px;
 }
+/* ------------------
+    conceptual part
+---------------------- */
+.login-interface{
+    display: flex;
+    background-color: lightskyblue;
+    
+}
+.half-width-1{
+    width:50%;
+    margin: 30px;
+    padding: 50px;
+}
+.half-width-2{
+    width:50%;
+    margin: 30px;
+    padding: 30px;
+    
+}
+.half-width-2 button{
+    background-color: rgb(224, 42, 72);
+    color: white;
+}
+.form{
+    width: 30%;
+    background-color: white;
+    padding: 35px;
+    border-radius: 8px;
+}
 
 /* --------------------
      Footer part
 ------------------ */
 
 .footers{
-    
-    
-    
     background-color: rgb(26, 3, 43);
     color: white;
     display: flex;
@@ -176,4 +203,121 @@ this is the gadgets part
     text-align: center;
     margin:2px;
     padding: 2px;
+}
+
+/* ---------------------
+     responsiveness
+---------------------- */
+
+/* ---------------------
+        tab devices 
+-------------------------*/
+
+@media only screen and (max-width:975px) {
+    .header{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .banner{
+        grid-template-columns: repeat(3 ,1fr);
+    }
+    .collection{
+        grid-template-columns: repeat(3 ,1fr);
+    }
+    .banner {
+        display: block;
+        padding-left: 20px;
+    }
+   
+    .gadgets {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .login-interface {
+        display: block;
+        padding: 20px 0px;
+    }
+    nav {
+        display: inline-block;
+        padding: 0;
+    }
+    #banner-header {
+        font-size: 2em;
+    }
+    .half-width-2 {
+        padding: 0;
+        width: 100%;
+        margin: 15px;
+    }
+    .half-width-1 {
+        padding: 0;
+    }
+    .form {
+        width: 80%;
+        background-color: white;
+        padding: 10px;
+    }
+    .banner-detail {
+        width: 100%;
+    }
+}
+
+/* -------------------
+       mobile devices
+---------------------- */
+
+@media only screen and (max-width:688px) {
+    .header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .banner{
+        grid-template-columns: repeat(1 ,1fr);
+    }
+    .collection{
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    .banner {
+        display: block;
+        padding-left: 20px;
+    }
+    .logos {
+        display: block;
+    }
+    .logo{
+      
+    }
+    .logo img{
+        width: 50%!important;
+        padding: 20px;
+    }
+    .gadgets {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .login-interface {
+        display: block;
+        padding: 20px 0px;
+    }
+    nav {
+        display: inline-block;
+        padding: 0;
+    }
+    #banner-header {
+        font-size: 2em;
+    }
+    .half-width-2 {
+        padding: 0;
+        width: 100%;
+        margin: 15px;
+    }
+    .half-width-1 {
+        padding: 0;
+    }
+    .form {
+        width: 80%;
+        background-color: white;
+        padding: 10px;
+    }
+    .banner-detail {
+        width: 100%;
+    }
 }
